@@ -457,9 +457,12 @@ p$(name).1:	psc.doc torev
 p$(name).man:	p$(name).1
 	nroff -man p$(name).1 > p$(name).man
 
-install: $(EXDIR)/$(name) $(EXDIR)/$(name)qref $(EXDIR)/p$(name) \
+install: mkdir $(EXDIR)/$(name) $(EXDIR)/$(name)qref $(EXDIR)/p$(name) \
 	 $(LIBDIR)/tutorial $(MANDIR)/$(name).$(MANEXT) \
 	 $(MANDIR)/p$(name).$(MANEXT)
+
+mkdir:
+	install -d $(EXDIR) $(LIBDIR) $(MANDIR)
 
 $(EXDIR)/$(name): $(name)
 	cp $(name) $(EXDIR)
