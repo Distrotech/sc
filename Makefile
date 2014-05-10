@@ -463,15 +463,12 @@ install: $(EXDIR)/$(name) $(EXDIR)/$(name)qref $(EXDIR)/p$(name) \
 
 $(EXDIR)/$(name): $(name)
 	cp $(name) $(EXDIR)
-	strip $(EXDIR)/$(name)
 
 $(EXDIR)/$(name)qref: $(name)qref
 	cp $(name)qref $(EXDIR)
-	strip $(EXDIR)/$(name)qref
 
 $(EXDIR)/p$(name): p$(name)
 	cp p$(name) $(EXDIR)
-	strip $(EXDIR)/p$(name)
 
 $(LIBDIR)/tutorial: tutorial.sc $(LIBDIR)
 	cp tutorial.sc $(LIBDIR)/tutorial.$(name)
