@@ -20,7 +20,7 @@ NAME=SC
 # packaging this with an O/S, for example, you'll probably want to change
 # this to /usr.  Otherwise, /usr/local is probably more appropriate, unless
 # you're replacing the vendor-supplied version.
-prefix=/usr
+prefix=$(DESTDIR)/usr
 
 # This is where the install step puts it.
 EXDIR=${prefix}/bin
