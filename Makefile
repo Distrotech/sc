@@ -305,7 +305,7 @@ CC=gcc
 # people who don't understand them.
 #CFLAGS=-DSYSV3 -O2 -Wall -pipe
 CFLAGS=-DSYSV3 -O2 -pipe
-LIB=-lm -lncurses
+LIB=-lm -lncurses -ltinfo
 
 # All of the source files
 SRC=Makefile color.c cmds.c crypt.c eres.sed frame.c format.c gram.y help.c \
